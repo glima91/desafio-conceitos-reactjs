@@ -15,13 +15,13 @@ function App() {
       // atualiza estado da variavel
       setRepositories(response.data);
     });
-  });
+  },[]);
 
   async function handleAddRepository() {
     const response = await api.post('repositories',{
-      "title": `Repositorio ${Date.now()}`,
-      "url": "url do repositorio 1",
-      "techs": ['tech1','tech2','tech3']
+      title: `Repositorio ${Date.now()}`,
+      url: "https://github.com/glima91/desafio-conceitos-reactjs",
+      techs: ['tech1','tech2','tech3']
     });  
 
     
